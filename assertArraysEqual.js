@@ -30,7 +30,9 @@ eqArrays(["1", "2", "3"], ["1", "2", 3]); // => false
 assertEqual(eqArrays([1, 2, 3], [1, 2, 3]), true); // => should PASS
 
 const assertArraysEqual = function(firstArray, secondArray) {
-  eqArrays(firstArray, secondArray) 
-  console.log(`✅✅✅ Assertion Passed: ${firstArray} === ${secondArray}`);
-  console.log(`🛑🛑🛑 Assertion Failed: ${firstArray} !== ${secondArray}`);
+  if (eqArrays(firstArray,secondArray)) {
+    console.log(`✅✅✅ Assertion Passed: ${firstArray} === ${secondArray}`);
+  } else {
+    console.log(`🛑🛑🛑 Assertion Failed: ${firstArray} !== ${secondArray}`);
+  }
 };
