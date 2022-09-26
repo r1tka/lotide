@@ -8,5 +8,6 @@ if (actual === expected) {
 };
 // Test code
 
-console.assert(assertEqual(1,1));
 
+
+module.exports = assertEqual;
